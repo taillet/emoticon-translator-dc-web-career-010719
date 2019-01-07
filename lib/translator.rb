@@ -29,4 +29,10 @@ end
 
 def get_english_meaning(path, emo)
   # code goes here
+    emo_hash = load_library(path)
+    find = emo_hash["get_meaning"][emo]
+    if find == nil
+      find = "Sorry, that emoticon was not found"
+    end
+  find
 end
