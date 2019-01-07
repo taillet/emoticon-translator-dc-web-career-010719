@@ -6,9 +6,9 @@ def load_library(path)
   # code goes here
   emo = YAML.load_file(path)
   emo_hash = {}
-
-  emo_hash["get_emoticon"] = {}
+  
   emo_hash["get_meaning"] = {}
+  emo_hash["get_emoticon"] = {}
 
   emo.each do |english, emo|
     emo_hash["get_emoticon"][emo.first] = emo.last
